@@ -32,6 +32,8 @@
             }
             body {
                 height: 100vh;
+                width: 100vw;
+                overflow: hidden;
                 background: rgb(146,255,221);
                 background: linear-gradient(0deg, rgba(146,255,221,1) 0%, rgba(43,165,255,1) 100%);
             }
@@ -43,6 +45,7 @@
             a {
                 text-decoration: none;
                 color: #0078d2;
+                cursor: pointer;
             }
             #filters-btn {
                 color: white;
@@ -71,12 +74,14 @@
                 background-color: #0078d2;
                 border-radius: 100%;
                 box-shadow: 0px 0px 40px #0078d2;
+                cursor: pointer;
             }
             #randomize-btn:active {
                 filter: brightness(0.8);
             }
             #randomize-btn img {
-                height: 80%;
+                height: 160px;
+                margin-top: 50px;
             }
             #resultHolder {
                 color: white;
@@ -85,12 +90,27 @@
             #startupModal .modal-dialog {
                 top: 20%;
             }
-            #filtersModal .btn-group-toggle {
+            #filtersHolder {
+                height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 1000px;
+                background-color: white;
+                transition: left 0.5s;
+            }
+            #filtersHolder .btn-group-toggle {
+                overflow: hidden;
                 text-align: left;
             }
-            .filter-header {
+            #filtersHolder .filter-header {
                 display: flex;
                 justify-content: space-between;
+            }
+            #filtersHolder .locations {
+                height: 144px;
+            }
+            #filtersHolder .cuisines {
+                height: 192px;
             }
             .btn-filter, .btn-filter:hover {
                 color: #aaa;
@@ -201,6 +221,7 @@
                 for(var j=0; j<cuisines.length; j++){
                     cuisinelist.push(cuisines[j].innerText);
                 }
+                closeFilters();
             }
 
             function randomize(){
@@ -279,17 +300,25 @@
                 $('.all').html('Select All');
             }
 
+            function openFilters(){
+                $('#filtersHolder').css('left', '0');
+                $('#filtersHolder').show();
+            }
+
+            function closeFilters(){
+                $('#filtersHolder').css('left', '1000px');
+                $('#mainHolder').show();
+                applyFiltersUI();
+            }
+
             $(document).ready(function() {
                 $('#startupModal').modal('show');
-                $('#filtersModal').on('hide.bs.modal', function () {
-                    applyFiltersUI();
-                });
             });
         </script>
     </head>
     <body>
-        <h1 id="filters-btn" data-toggle="modal" data-target="#filtersModal"><i class="fas fa-filter fa-xs"></i></h1>
-        <div class="mainHolder">
+        <h1 id="filters-btn" onclick="openFilters();"><i class="fas fa-filter fa-xs"></i></h1>
+        <div id="mainHolder">
             <h5 id="subtitle">Tap the icon below to pick a meal!</h5>
             <div id="randomize-btn" onclick="randomize();">
                 <img id="resultIcon" src="https://image.flaticon.com/icons/png/512/179/179283.png">
@@ -314,16 +343,13 @@
   </div>
 </div>
 
-<!-- TODO im thinking i dont use bootstrap modals and do it myself with animations and everything -->
-<div class="modal" id="filtersModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <span data-dismiss="modal" aria-label="Close">&larr;</span>
+<div id="filtersHolder">
+    <div class="modal-header">
+        <span onclick="closeFilters()" aria-label="Close">&#10005;</span>
         <h3 style="margin-bottom:0;">Filters</h3>
         <a class="modal-title" onclick="reset();">Reset</a>
-      </div>
-      <div class="modal-body">
+    </div>
+    <div class="modal-body">
         <div class="filter-header"><h6>Locations</h6><a href="#" class="all" onclick="selectAll(this, 'locations');">Select All</a></div>
         <div class="btn-group-toggle locations" data-toggle="buttons">
           <label class="btn btn-filter" id="Mesa College"><input type="checkbox">Mesa College</label>
@@ -349,10 +375,8 @@
           <label class="btn btn-filter" id="Mediterranean"><input type="checkbox">Mediterranean</label>
           <label class="btn btn-filter" id="American"><input type="checkbox">American</label>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn" data-dismiss="modal" onclick="createFilterArrays();">Apply</button>
-      </div>
     </div>
-  </div>
+    <div class="modal-footer">
+        <button type="button" class="btn" onclick="createFilterArrays();">Apply</button>
+    </div>
 </div>
