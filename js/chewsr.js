@@ -169,13 +169,17 @@ function reset(){
 }
 
 function openFilters(){
-    $('#filtersHolder').css('left', '0');
+    var resposivewindow = window.matchMedia('(max-width: 1024px)');
+    if(resposivewindow.matches){
+        $('#filtersHolder').css('left', '0');
+    } else {
+        $('#filtersHolder').css('left', '1000px');
+    }
     $('#filtersHolder').show();
 }
 
 function closeFilters(){
-    $('#filtersHolder').css('left', '1000px');
-    $('#mainHolder').show();
+    $('#filtersHolder').css('left', '2000px');
     applyFiltersUI();
 }
 
