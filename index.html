@@ -29,7 +29,11 @@
         <link rel="icon" type="image/x-icon" href="images/heart.ico">
     </head>
     <body>
-        <h1 id="filters-btn" onclick="openFilters();"><i class="fas fa-filter fa-xs"></i></h1>
+        <h1 id="topmenu">
+            <i data-toggle="modal" data-target="#readableList" class="fas fa-list"></i>
+            &nbsp;&nbsp;
+            <i onclick="openFilters();" class="fas fa-filter fa-xs"></i>
+        </h1>
         <div id="mainHolder">
             <h5 id="subtitle">Tap the icon below to pick a meal!</h5>
             <div id="randomize-btn" onclick="randomize();">
@@ -91,4 +95,18 @@
     <div class="modal-footer">
         <button type="button" class="btn" onclick="createFilterArrays();">Apply</button>
     </div>
+</div>
+
+<div class="modal fade" id="readableList" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>List of Kristin &amp; Jorenne's Favorite San Diego Restaurants</h3>
+        <div class="dynamic-add">
+        </div>
+        <br/>
+        <button type="button" class="btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

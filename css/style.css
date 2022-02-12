@@ -19,7 +19,7 @@ a {
     color: #0078d2;
     cursor: pointer;
 }
-#filters-btn {
+#topmenu {
     color: white;
     text-align: right;
     padding: 20px;
@@ -97,4 +97,8 @@ a {
 }
 .btn-filter input{
     display: none;
+}
+#readableList .dynamic-add{
+    max-height: 70vh;
+    overflow: scroll;
 }

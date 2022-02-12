@@ -180,5 +180,56 @@ function closeFilters(){
 }
 
 $(document).ready(function() {
+    //display message on page load
     $('#startupModal').modal('show');
+
+    //creates human readable list from js array
+    var college = '';
+    var convoy = '';
+    var clairemont = '';
+    var balboa = '';
+    var mira = '';
+    var other = '';
+    for(var i=0; i<list.length; i++){
+        switch(list[i].location){
+            case 'Mesa College':
+                if(college.length == 0) college = list[i].name;
+                else college = college + ', ' + list[i].name;
+                break;
+            case 'Convoy':
+                if(convoy.length == 0) convoy = list[i].name;
+                else convoy = convoy + ', ' + list[i].name;
+                break;
+            case 'Clairemont Mesa':
+                if(clairemont.length == 0) clairemont = list[i].name;
+                else clairemont = clairemont + ', ' + list[i].name;
+                break;
+            case 'Balboa':
+                if(balboa.length == 0) balboa = list[i].name;
+                else balboa = balboa + ', ' + list[i].name;
+                break;
+            case 'Mira Mesa':
+                if(mira.length == 0) mira = list[i].name;
+                else mira = mira + ', ' + list[i].name;
+                break;
+            case 'Other':
+                if(other.length == 0) other = list[i].name;
+                else other = other + ', ' + list[i].name;
+                break;
+        }
+    }
+    var data = '<br/><h6>Mesa College</h6>'
+                    + college
+                + '<br/><br/><h6>Convoy</h6>'
+                    + convoy
+                + '<br/><br/><h6>Clairemont Mesa</h6>'
+                    + clairemont
+                + '<br/><br/><h6>Balboa</h6>'
+                    + balboa
+                + '<br/><br/><h6>Mira Mesa</h6>'
+                    + mira
+                + '<br/><br/><h6>Other Places</h6>'
+                    + other;
+    var listHolder = $('#readableList').find('.dynamic-add');
+    listHolder.prepend(data);
 });
