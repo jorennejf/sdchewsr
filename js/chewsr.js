@@ -95,6 +95,7 @@ function createFilterArrays(){
 function randomize(){
     $('#resultIcon').hide();
     $('#resultHolder').show();
+    $('#no-options').hide();
     var newlist = [];
 
     //if filters are checked, narrow down options
@@ -126,6 +127,11 @@ function randomize(){
                     newlist = newlist.concat(temp);
                 }
             }
+        }
+        //if filters are checked but there are no available options from those filters
+        if(newlist.length==0){
+            newlist.push({'name':'Leftovers :)'});
+            $('#no-options').show();
         }
     }
     //if no filters selected, do not filter
