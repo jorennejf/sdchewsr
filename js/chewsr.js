@@ -28,9 +28,14 @@ list.push({'name':'Ma\'s House', 'location': 'Clairemont Mesa', 'cuisine': 'Chin
 list.push({'name':'Okan Diner', 'location': 'Clairemont Mesa', 'cuisine': 'Japanese'});
 list.push({'name':'Mister Falafel', 'location': 'Clairemont Mesa', 'cuisine': 'Mediterranean'});
 list.push({'name':'Main Chick', 'location': 'Clairemont Mesa', 'cuisine': 'American'});
+list.push({'name':'Chaba Thai', 'location': 'Clairemont Mesa', 'cuisine': 'Thai'});
 list.push({'name':'Chili\'s', 'location': 'Clairemont Mesa', 'cuisine': 'American'});
 list.push({'name':'Domino\'s', 'location': 'Clairemont Mesa', 'cuisine': 'American'}); //duplicate
 list.push({'name':'Dino\'s Gyros', 'location': 'Clairemont Mesa', 'cuisine': 'Mediterranean'});
+list.push({'name':'Tahini', 'location': 'Clairemont Mesa', 'cuisine': 'Mediterranean'});
+list.push({'name':'Lit\'l Pepper', 'location': 'Clairemont Mesa', 'cuisine': 'American'});
+list.push({'name':'Village Indian Cuisine', 'location': 'Clairemont Mesa', 'cuisine': 'Indian'});
+list.push({'name':'Sonic', 'location': 'Clairemont Mesa', 'cuisine': 'American'});
 list.push({'name':'McDonald\'s', 'location': 'Clairemont Mesa', 'cuisine': 'American'});
 list.push({'name':'McDonald\'s', 'location': 'Balboa', 'cuisine': 'American'}); //duplicate
 list.push({'name':'Taco Bell', 'location': 'Clairemont Mesa', 'cuisine': 'Latin'});
@@ -44,12 +49,14 @@ list.push({'name':'Krispy Krunchy Chicken', 'location': 'Balboa', 'cuisine': 'Am
 list.push({'name':'Thai Time', 'location': 'Balboa', 'cuisine': 'Thai'});
 list.push({'name':'Luna Grill', 'location': 'Balboa', 'cuisine': 'Mediterranean'});
 list.push({'name':'Vallarta\'s', 'location': 'Balboa', 'cuisine': 'Latin'});
+list.push({'name':'China Quick Wok', 'location': 'Balboa', 'cuisine': 'Chinese'});
 list.push({'name':'Hawaiian Fresh Seafood', 'location': 'Mira Mesa', 'cuisine': 'Hawaiian'});
 list.push({'name':'Jollibee', 'location': 'Mira Mesa', 'cuisine': 'Filipino'});
 list.push({'name':'Grill City', 'location': 'Mira Mesa', 'cuisine': 'Filipino'});
 list.push({'name':'R&B Cuisine', 'location': 'Mira Mesa', 'cuisine': 'Filipino'});
 list.push({'name':'Raising Cane\'s', 'location': 'Mira Mesa', 'cuisine': 'American'});
 list.push({'name':'LouZiana', 'location': 'Mira Mesa', 'cuisine': 'American'});
+list.push({'name':'Charminar', 'location': 'Mira Mesa', 'cuisine': 'Indian'});
 list.push({'name':'La Fuente', 'location': 'Other', 'cuisine': 'Latin'});
 list.push({'name':'Ike\'s Sandwiches', 'location': 'Other', 'cuisine': 'American'});
 list.push({'name':'Wingstop', 'location': 'Other', 'cuisine': 'American'});
