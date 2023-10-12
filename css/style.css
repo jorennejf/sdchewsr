@@ -51,6 +51,9 @@ a {
     box-shadow: 0px 0px 40px #0078d2;
     cursor: pointer;
 }
+#randomize-btn:hover {
+    filter: brightness(1.1);
+}
 #randomize-btn:active {
     filter: brightness(0.8);
 }
@@ -87,11 +90,15 @@ a {
 #filtersHolder .cuisines {
     height: 192px;
 }
-.btn-filter, .btn-filter:hover {
+.btn-filter {
     color: #aaa;
     background-color: white;
     border-color: #aaa;
     margin: 5px;
+}
+.btn-filter:hover {
+    color: #0078d2;
+    border-color: #0078d2;
 }
 .btn-filter.active {
     color: white;
