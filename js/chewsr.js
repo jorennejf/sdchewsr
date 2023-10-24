@@ -76,8 +76,8 @@ list.push({'name':'Charminar', 'location': 'Mira Mesa', 'cuisine': 'Indian'});
 list.push({'name':'Sushi Diner 2', 'location': 'Other', 'cuisine': 'Japanese'});
 list.push({'name':'Ike\'s Sandwiches', 'location': 'Other', 'cuisine': 'American'});
 list.push({'name':'Wingstop', 'location': 'Other', 'cuisine': 'American'});
-list.push({'name':'Cava', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'});
-list.push({'name':'Wagyu Shawarma Grill', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'});
+list.push({'name':'Cava', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'}); //duplicate
+list.push({'name':'Wagyu Shawarma Grill', 'location': 'Other', 'cuisine': 'Mediterranean'});
 list.push({'name':'Public Square Coffee', 'location': 'Other', 'cuisine': 'American'});
 list.push({'name':'Pomegranate', 'location': 'Other', 'cuisine': 'Other'});
 //TODO what to do with duplicates?
