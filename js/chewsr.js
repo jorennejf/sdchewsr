@@ -53,7 +53,8 @@ list.push({'name':'Panera Bread', 'location': 'Balboa', 'cuisine': 'American'});
 list.push({'name':'Panera Bread', 'location': 'Serra Mesa', 'cuisine': 'American'}); //duplicate
 list.push({'name':'Panera Bread', 'location': 'Mission Valley', 'cuisine': 'American'}); //duplicate
 list.push({'name':'Ikea', 'location': 'Mission Valley', 'cuisine': 'American'});
-list.push({'name':'Cava', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'});
+list.push({'name':'CAVA', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'});
+list.push({'name':'Wagyu Shawarma Grill', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'});
 list.push({'name':'The Cheesecake Factory', 'location': 'Mission Valley', 'cuisine': 'American'});
 list.push({'name':'The Habit', 'location': 'Balboa', 'cuisine': 'American'});
 list.push({'name':'Five Guys', 'location': 'Balboa', 'cuisine': 'American'});
@@ -76,8 +77,7 @@ list.push({'name':'Charminar', 'location': 'Mira Mesa', 'cuisine': 'Indian'});
 list.push({'name':'Sushi Diner 2', 'location': 'Other', 'cuisine': 'Japanese'});
 list.push({'name':'Ike\'s Sandwiches', 'location': 'Other', 'cuisine': 'American'});
 list.push({'name':'Wingstop', 'location': 'Other', 'cuisine': 'American'});
-list.push({'name':'Cava', 'location': 'Mission Valley', 'cuisine': 'Mediterranean'}); //duplicate
-list.push({'name':'Wagyu Shawarma Grill', 'location': 'Other', 'cuisine': 'Mediterranean'});
+list.push({'name':'CAVA', 'location': 'Other', 'cuisine': 'Mediterranean'}); //duplicate
 list.push({'name':'Public Square Coffee', 'location': 'Other', 'cuisine': 'American'});
 list.push({'name':'Pomegranate', 'location': 'Other', 'cuisine': 'Other'});
 //TODO what to do with duplicates?
